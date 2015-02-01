@@ -1,0 +1,46 @@
+{
+  "name": "koa-ovenware",
+  "version": "0.0.1",
+  "description": "Automatic Model / Controller Loader for Koa",
+  "main": "lib/koa-ovenware.js",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec --require should --harmony-generators test/* --bail",
+    "test-cov": "NODE_ENV=test node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require should test/* --bail",
+    "test-travis": "NODE_ENV=test node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require should test/* --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zedgu/koa-ovenware.git"
+  },
+  "keywords": [
+    "MVC",
+    "Automatic",
+    "koa",
+    "middleware",
+    "loader",
+    "route",
+    "router"
+  ],
+  "author": "zedgu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zedgu/koa-ovenware/issues"
+  },
+  "homepage": "https://github.com/zedgu/koa-ovenware",
+  "dependencies": {
+    "koa-router": "^3.8.0",
+    "ovenware": "^0.1.1",
+    "debug": "*"
+  },
+  "devDependencies": {
+    "co-body": "^1.0.0",
+    "istanbul-harmony": "^0.2.9",
+    "koa": "*",
+    "mocha": "^1.21.4",
+    "should": "^4.0.4",
+    "supertest": "^0.13.0"
+  },
+  "engines": {
+    "node": ">= 0.11.9"
+  }
+}
