@@ -28,9 +28,9 @@
   },
   "homepage": "https://github.com/zedgu/koa-ovenware",
   "dependencies": {
+    "debug": "*",
     "koa-router": "^3.8.0",
-    "ovenware": "^0.1.1",
-    "debug": "*"
+    "ovenware": "^0.1.2"
   },
   "devDependencies": {
     "co-body": "^1.0.0",

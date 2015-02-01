@@ -1,0 +1,7 @@
+docs
+benchmarks
+examples
+test
+Makefile
+coverage
+.travis.yml
