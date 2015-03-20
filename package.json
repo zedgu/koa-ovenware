@@ -1,6 +1,6 @@
 {
   "name": "koa-ovenware",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Automatic Model / Controller Loader for Koa",
   "main": "lib/kow.js",
   "scripts": {
