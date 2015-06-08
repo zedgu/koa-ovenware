@@ -55,7 +55,7 @@ describe('Kow Testing', function(){
         aliases: {
           index: ''
         },
-        prefix: '/'
+        prefix: ''
       });
     });
   });

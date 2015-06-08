@@ -4,9 +4,9 @@
   "description": "Automatic Model / Controller Loader for Koa",
   "main": "lib/kow.js",
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec --require should --harmony-generators test/* --bail",
-    "test-cov": "NODE_ENV=test node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require should test/* --bail",
-    "test-travis": "NODE_ENV=test node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require should test/* --bail"
+    "test": "./node_modules/.bin/mocha --reporter spec --require should --harmony-generators test/* --bail",
+    "test-cov": "node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require should test/* --bail",
+    "test-travis": "node --harmony-generators node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require should test/* --bail"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   "dependencies": {
     "debug": "*",
     "koa-router": "^4.2.0",
-    "ovenware": "^0.1.2"
+    "ovenware": "^0.2.0"
   },
   "devDependencies": {
     "co-body": "^1.0.0",
