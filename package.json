@@ -29,13 +29,13 @@
   "homepage": "https://github.com/zedgu/koa-ovenware",
   "dependencies": {
     "debug": "*",
-    "koa-router": "*",
+    "koa-router": "^7.2.0",
     "ovenware": "^0.2.3"
   },
   "devDependencies": {
     "co-body": "^4.0.0",
     "istanbul-harmony": "^0.3.16",
-    "koa": "*",
+    "koa": "^2.0.1",
     "mocha": "^2.3.4",
     "ovenware": "^0.2.3",
     "should": "^8.2.0",

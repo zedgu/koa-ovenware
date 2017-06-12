@@ -1,9 +1,10 @@
-var app = require('koa')();
-var Kow = require('..');
+const KOA = require('koa');
+const app = new KOA();
+const Kow = require('..');
 
 describe('Kow Testing', function(){
   describe('Kow(app, {root: "./examples/simple/lib"})', function() {
-    var kow = Kow(app, {root: './examples/simple/lib'});
+    let kow = Kow(app, {root: './examples/simple/lib'});
     it('should be set with new root path "./examples/simple/lib"', function() {
       kow.conf.root.should.eql("./examples/simple/lib");
     });

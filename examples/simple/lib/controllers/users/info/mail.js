@@ -1,3 +1,3 @@
-exports.index = function *() {
-  this.body = 'in /users/info';
+exports.index = function(ctx) {
+  ctx.body = 'in /users/info';
 };

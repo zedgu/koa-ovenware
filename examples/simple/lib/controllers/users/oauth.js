@@ -13,13 +13,13 @@ exports.routes = {
     path: '/:id'
   }
 }
-exports.entry = function *() {
-  this.body = 'in sub dir';
+exports.entry = function(ctx) {
+  ctx.body = 'in sub dir';
 };
 
-exports.post = function *() {
-  this.body = exports.model().index();
+exports.post = function(ctx) {
+  ctx.body = exports.model().index();
 };
-exports.get = function *() {
-  this.body = exports.model('items').index();
+exports.get = function(ctx) {
+  ctx.body = exports.model('items').index();
 }

@@ -1,11 +1,11 @@
-exports.index = function *() {
-  if (this.query.exports) {
-    this.body = exports.ctrl() === exports.ctrl('index');
+exports.index = function(ctx) {
+  if (ctx.query.exports) {
+    ctx.body = exports.ctrl() === exports.ctrl('index');
   } else {
-    this.body = 'Hello World!';
+    ctx.body = 'Hello World!';
   }
 };
 
-exports.create = function *() {
-  this.body = this.ctrl() === exports;
+exports.create = function(ctx) {
+  ctx.body = ctx.ctrl() === exports;
 };

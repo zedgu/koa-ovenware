@@ -3,7 +3,7 @@ var Kow = require('..');
 var koa = require('koa');
 
 describe('Controllers', function(){
-  var app = koa();
+  var app = new koa();
 
   var kow = Kow(app, {root: './examples/simple/lib'});
   var request = agent(app.callback());
@@ -140,7 +140,7 @@ describe('Controllers', function(){
 describe('When the prefix is a RegExp', function() {
   describe('the url not match the prefixPattern', function() {
     it('should get 404 when get /', function(done) {
-      var app = koa();
+      var app = new koa();
       var kow = Kow(app, {
           root: './examples/simple/lib',
           prefix: /api\/\d\.\d/
@@ -151,7 +151,7 @@ describe('When the prefix is a RegExp', function() {
         .expect(404, done);
     });
     it('should get 404 when get /*', function(done) {
-      var app = koa();
+      var app = new koa();
       var kow = Kow(app, {
           root: './examples/simple/lib',
           prefix: /api\/\d\.\d/i
@@ -164,7 +164,7 @@ describe('When the prefix is a RegExp', function() {
   });
   describe('the url match the prefixPattern', function() {
     it('should get the response', function(done) {
-      var app = koa();
+      var app = new koa();
       var kow = Kow(app, {
           root: './examples/simple/lib',
           prefix: /api\/\d\.\d/g
@@ -179,7 +179,7 @@ describe('When the prefix is a RegExp', function() {
 });
 
 describe('When the prefix is a String', function() {
-  var app = koa();
+  var app = new koa();
   var kow = Kow(app, {
       root: './examples/simple/lib',
       prefix: '/api/0.1'

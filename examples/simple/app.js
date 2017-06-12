@@ -1,6 +1,6 @@
-var app = require('koa')()
-  , kow = require('../..')
-  ;
+const koa = require('koa');
+const app = new koa();
+const kow = require('../..');
 
 kow(app);
 

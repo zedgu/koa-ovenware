@@ -1,13 +1,13 @@
 var parser = require('co-body');
 
-exports.index = function *() {
-  this.body = this.model().index();
+exports.index = function(ctx) {
+  ctx.body = ctx.model().index();
 };
-exports.get = function *() {
-  this.body = this.model().get(this.params.id);
+exports.get = function(ctx) {
+  ctx.body = ctx.model().get(ctx.params.id);
 };
-exports.create = function *() {
-  var body = yield parser(this.req);
+exports.create = async function(ctx) {
+  var body = await parser(ctx.req);
 
-  this.body = this.model().create('post', body['post']);
+  ctx.body = ctx.model().create('post', body['post']);
 };
